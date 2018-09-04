@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class SignUpVC4: UIViewController {
     
@@ -17,6 +19,8 @@ class SignUpVC4: UIViewController {
     var city = ""
     var state = ""
     var zipCode = ""
+    
+    //var database: Firestore!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +35,43 @@ class SignUpVC4: UIViewController {
         
 
     }
+    @IBAction func createAccountButton(_ sender: Any) {
 
+        Auth.auth().createUser(withEmail: email, password: password) { user, error in
+            let database = Firestore.firestore()
+            guard let userID = user?.user.uid else {return}
+            
+                let ref = database.collection("user").document(userID)
+            
+                
+                let data = [
+                "email" : self.email,
+                "churchName": self.churchName,
+                "churchLocation" : "\(self.address), \(self.city), \(self.state) \(self.zipCode) ",
+                "missionStatement" : "test mission statement",
+                "Bio" : "We love Jesus"
+                ]
+                
+                ref.setData(data) { error in
+                if let error = error {
+                    print("Error adding document: \(error)")
+                } else {
+                    print("Docuemnt added with ID: \(ref.documentID)")
+                }
+                
+            }
+            
+            
+        }
+        
+     
+        
+ 
+        
+        
+        
+    }
+    
  
     
 
