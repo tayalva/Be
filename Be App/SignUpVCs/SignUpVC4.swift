@@ -12,6 +12,11 @@ import FirebaseAuth
 
 class SignUpVC4: UIViewController {
     
+
+    @IBOutlet weak var addPhotoButton: UIButton!
+    
+    let photoPicker = UIImagePickerController()
+    
     var email = ""
     var password = ""
     var churchName = ""
@@ -24,17 +29,23 @@ class SignUpVC4: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(email)
-        print(password)
-        print(churchName)
-        print(address)
-        print(city)
-        print(state)
-        print(zipCode)
-        
-
+ 
+        photoPicker.delegate = self
     }
+    
+    
+    
+    @IBAction func addPhotoButton(_ sender: Any) {
+        
+        photoPicker.allowsEditing = false
+        photoPicker.sourceType = .photoLibrary
+        photoPicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .savedPhotosAlbum)!
+        present(photoPicker, animated: true, completion: nil)
+    }
+    
+    
+    
+    
     @IBAction func createAccountButton(_ sender: Any) {
 
         Auth.auth().createUser(withEmail: email, password: password) { user, error in
@@ -65,10 +76,7 @@ class SignUpVC4: UIViewController {
         }
         
      performSegue(withIdentifier: "unwindSignUpSegue", sender: self)
-        
- 
-        
-        
+
         
     }
     
@@ -86,3 +94,60 @@ class SignUpVC4: UIViewController {
     */
 
 }
+
+
+
+
+extension SignUpVC4: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            
+            addPhotoButton.setImage(chosenImage, for: .normal)
+            dismiss(animated: true, completion: nil)
+        } else {
+            
+            dismiss(animated: true, completion: nil)
+            let alertVC = UIAlertController(
+                title: "Photos Only",
+                message: "Sorry, only photos can be added to a profile",
+                preferredStyle: .alert)
+            let okAction = UIAlertAction(
+                title: "OK",
+                style:.default,
+                handler: nil)
+            alertVC.addAction(okAction)
+            present(
+                alertVC,
+                animated: true,
+                completion: nil)
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

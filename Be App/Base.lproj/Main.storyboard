@@ -499,13 +499,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="csB-h2-xut"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Prayers" image="prayer" id="ZbL-vu-Y3a"/>
+                    <navigationItem key="navigationItem" title="Be." id="g8m-mt-QgU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qcb-4N-Bcy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281" y="181"/>
+            <point key="canvasLocation" x="2165.5999999999999" y="180.29556650246306"/>
         </scene>
-        <!--Messages-->
+        <!--Be.-->
         <scene sceneID="0kC-a9-eCg">
             <objects>
                 <viewController id="r1c-dS-bif" customClass="MessagesVC" customModule="Be_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -524,13 +524,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6nd-Gc-RBX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Messages" image="messages" id="Faj-QH-kJp"/>
+                    <navigationItem key="navigationItem" title="Be." id="NEB-tX-xub"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kvm-dA-vrf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044" y="181"/>
+            <point key="canvasLocation" x="3871.1999999999998" y="180.29556650246306"/>
         </scene>
-        <!--Notifications-->
+        <!--Be.-->
         <scene sceneID="MJw-44-ndD">
             <objects>
                 <viewController id="KyK-7J-rzN" customClass="NotificationsVC" customModule="Be_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -549,13 +549,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rlT-bs-x8K"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Notifications" image="notifications" id="n0H-7K-FmN"/>
+                    <navigationItem key="navigationItem" title="Be." id="chq-L4-fPU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="amu-iz-jBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1785" y="181"/>
+            <point key="canvasLocation" x="5554.3999999999996" y="180.29556650246306"/>
         </scene>
-        <!--Home-->
+        <!--Be.-->
         <scene sceneID="tHD-Zz-I9Y">
             <objects>
                 <viewController id="9eg-hA-Ugm" customClass="HomeVC" customModule="Be_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -574,11 +574,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="BU7-Yt-nfa"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="home" id="Dwp-4w-rwe"/>
+                    <navigationItem key="navigationItem" title="Be." id="4re-VI-EoW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jKU-hA-4pU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-500" y="181"/>
+            <point key="canvasLocation" x="442.39999999999998" y="180.29556650246306"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="W09-uq-8Re">
@@ -592,10 +592,10 @@
                         <color key="barTintColor" red="0.16613996028900146" green="0.22974711656570435" blue="0.31698238849639893" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9eg-hA-Ugm" kind="relationship" relationship="viewControllers" id="rIU-Kk-k04"/>
-                        <segue destination="ewM-GC-tHV" kind="relationship" relationship="viewControllers" id="J6E-dU-cGK"/>
-                        <segue destination="r1c-dS-bif" kind="relationship" relationship="viewControllers" id="1CN-XF-s7A"/>
-                        <segue destination="KyK-7J-rzN" kind="relationship" relationship="viewControllers" id="G33-rb-1NF"/>
+                        <segue destination="ric-zi-xd7" kind="relationship" relationship="viewControllers" id="rIU-Kk-k04"/>
+                        <segue destination="kvb-Y3-UaD" kind="relationship" relationship="viewControllers" id="J6E-dU-cGK"/>
+                        <segue destination="8Xz-Rp-dyA" kind="relationship" relationship="viewControllers" id="1CN-XF-s7A"/>
+                        <segue destination="X6r-OX-XDU" kind="relationship" relationship="viewControllers" id="G33-rb-1NF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNx-Oe-aJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -687,15 +687,6 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="addPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="fL3-pn-hyC">
-                                                <rect key="frame" x="125" y="706" width="125" height="125"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="50"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Describe your church" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMn-2b-iHt">
                                                 <rect key="frame" x="75" y="616" width="225" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -703,6 +694,14 @@
                                                 <color key="textColor" red="0.53607785701751709" green="0.39311575889587402" blue="0.5042155385017395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flv-ej-nBh">
+                                                <rect key="frame" x="118" y="710" width="128" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="addPhoto"/>
+                                                <connections>
+                                                    <action selector="addPhotoButton:" destination="T9G-jY-2f2" eventType="touchUpInside" id="hDG-C1-dDp"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -731,13 +730,14 @@
                     </view>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
+                        <outlet property="addPhotoButton" destination="flv-ej-nBh" id="57n-SR-1bC"/>
                         <segue destination="UbD-Pl-pfu" kind="unwind" identifier="unwindSignUpSegue" unwindAction="unwindSignUPWithSegue:" id="dYi-1r-2J0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5S8-Dw-eBH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="UbD-Pl-pfu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1686" y="924"/>
+            <point key="canvasLocation" x="1685.5999999999999" y="923.64532019704438"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eaX-Z3-TFg">
@@ -760,6 +760,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ogV-I1-ZJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1286" y="855"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="YHl-eF-VWb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ric-zi-xd7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="Dwp-4w-rwe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dXy-fU-naf">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9eg-hA-Ugm" kind="relationship" relationship="rootViewController" id="ihx-ak-TbV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="atc-zE-1LO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-313" y="180"/>
+        </scene>
+        <!--Prayers-->
+        <scene sceneID="Eeu-4h-5UU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kvb-Y3-UaD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Prayers" image="prayer" id="ZbL-vu-Y3a"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mdI-ly-qg6">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ewM-GC-tHV" kind="relationship" relationship="rootViewController" id="ooW-tQ-5ue"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ffs-J3-r1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1452" y="180"/>
+        </scene>
+        <!--Messages-->
+        <scene sceneID="mnK-hp-obH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Xz-Rp-dyA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Messages" image="messages" id="Faj-QH-kJp"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gpa-n8-I79">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="r1c-dS-bif" kind="relationship" relationship="rootViewController" id="qBZ-Id-g17"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fmC-iy-6hf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3124" y="180"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="BHQ-7O-jfI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X6r-OX-XDU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notifications" image="notifications" id="n0H-7K-FmN"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q5J-KM-F5B">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KyK-7J-rzN" kind="relationship" relationship="rootViewController" id="wA6-d0-zSB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="otA-5c-gph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4833" y="180"/>
         </scene>
     </scenes>
     <resources>
