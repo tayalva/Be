@@ -23,6 +23,7 @@ class LogInVC: UIViewController {
     @IBOutlet weak var passwordLine: UIView!
     @IBOutlet weak var passwordIcon: UIImageView!
     
+    var userID: String!
     
     
 // Variables
@@ -39,26 +40,8 @@ class LogInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        database = Firestore.firestore()
-         
+ 
         
-        var ref: DocumentReference? = nil
-        /*
-        ref = database.collection("users").addDocument(data: [
-            "email" : "taylors@thewchurch.com",
-            "churchName": "The W Church",
-            "churchLocation" : "Newport Beach",
-            "Bio" : "We love Jesus"
-            
-        ]) { error in
-            if let error = error {
-                print("Error adding document: \(error)")
-            } else {
-                print("Docuemnt added with ID: \(ref!.documentID)")
-            }
-            
-        }
-      */
         
     }
     
@@ -86,9 +69,8 @@ class LogInVC: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             }
             
-            print(user?.user.uid)
-        
-            
+            self.userID = user?.user.uid
+            self.performSegue(withIdentifier: "mainViewSegue", sender: nil)
             print("You are logged in as \(email)")
            
             
@@ -137,7 +119,15 @@ class LogInVC: UIViewController {
         
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+       // let vc = segue.destination as? SignUpVC2
+       // vc?.email = email
+       // vc?.password = password
+        
+    }
     
 
 

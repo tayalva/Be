@@ -194,7 +194,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="27s-8I-HW3" kind="show" id="qZk-tv-1yO"/>
+                                    <segue destination="27s-8I-HW3" kind="show" identifier="mainViewSegue" id="qZk-tv-1yO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -483,7 +483,7 @@
         <!--Prayers-->
         <scene sceneID="voM-O4-CgY">
             <objects>
-                <viewController title="Prayers" id="ewM-GC-tHV" sceneMemberID="viewController">
+                <viewController title="Prayers" id="ewM-GC-tHV" customClass="PrayersVC" customModule="Be_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oLa-6p-Tf9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -499,7 +499,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="csB-h2-xut"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Prayers" id="ZbL-vu-Y3a"/>
+                    <tabBarItem key="tabBarItem" title="Prayers" image="prayer" id="ZbL-vu-Y3a"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qcb-4N-Bcy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -508,7 +508,7 @@
         <!--Messages-->
         <scene sceneID="0kC-a9-eCg">
             <objects>
-                <viewController id="r1c-dS-bif" sceneMemberID="viewController">
+                <viewController id="r1c-dS-bif" customClass="MessagesVC" customModule="Be_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qMF-AD-3gm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -524,22 +524,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6nd-Gc-RBX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Messages" id="Faj-QH-kJp"/>
+                    <tabBarItem key="tabBarItem" title="Messages" image="messages" id="Faj-QH-kJp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kvm-dA-vrf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1044" y="181"/>
         </scene>
-        <!--Profile-->
+        <!--Notifications-->
         <scene sceneID="MJw-44-ndD">
             <objects>
-                <viewController id="KyK-7J-rzN" sceneMemberID="viewController">
+                <viewController id="KyK-7J-rzN" customClass="NotificationsVC" customModule="Be_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Crb-jr-bID">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kld-Zw-Gxk">
-                                <rect key="frame" x="151" y="239" width="49" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kld-Zw-Gxk">
+                                <rect key="frame" x="151" y="239" width="97" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -549,7 +549,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rlT-bs-x8K"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="n0H-7K-FmN"/>
+                    <tabBarItem key="tabBarItem" title="Notifications" image="notifications" id="n0H-7K-FmN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="amu-iz-jBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -558,7 +558,7 @@
         <!--Home-->
         <scene sceneID="tHD-Zz-I9Y">
             <objects>
-                <viewController id="9eg-hA-Ugm" sceneMemberID="viewController">
+                <viewController id="9eg-hA-Ugm" customClass="HomeVC" customModule="Be_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a7H-zS-svt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -574,7 +574,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="BU7-Yt-nfa"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="Dwp-4w-rwe"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="Dwp-4w-rwe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jKU-hA-4pU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -588,7 +588,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.16613996028900146" green="0.22974711656570435" blue="0.31698238849639893" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
@@ -607,17 +607,17 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="T9G-jY-2f2" customClass="SignUpVC4" customModule="Be_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Htx-ZW-8Mg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWg-YH-uLb">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzk-1K-Keo" userLabel="Container View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqZ-Di-Gfk">
-                                                <rect key="frame" x="16" y="1067" width="343" height="67"/>
+                                                <rect key="frame" x="16" y="891" width="343" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.1661399603" green="0.2297471166" blue="0.31698238849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -630,36 +630,83 @@
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mission Statement" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="W23-jU-CMF">
-                                                <rect key="frame" x="16" y="200" width="343" height="50"/>
+                                                <rect key="frame" x="11" y="260" width="343" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits" textContentType="address-line1"/>
                                             </textField>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Hd-eq-RE7">
-                                                <rect key="frame" x="16" y="669" width="343" height="128"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e6a-46-MSq">
-                                                <rect key="frame" x="10" y="270" width="343" height="1"/>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e6a-46-MSq" userLabel="Mission Statement Line">
+                                                <rect key="frame" x="11" y="309" width="343" height="1"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bio:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMn-2b-iHt">
-                                                <rect key="frame" x="42" y="616" width="39" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Web Site" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FUa-p2-xW6" userLabel="Website">
+                                                <rect key="frame" x="11" y="339" width="343" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits" textContentType="address-line1"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bDn-EA-Csh" userLabel="Website Line">
+                                                <rect key="frame" x="16" y="388" width="343" height="1"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="@Instagram" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hE5-Nx-P9D" userLabel="@Instagram">
+                                                <rect key="frame" x="11" y="415" width="343" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits" textContentType="address-line1"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mNA-yh-iLc" userLabel="Instagram Line">
+                                                <rect key="frame" x="16" y="464" width="343" height="1"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FNR-TX-jrv" userLabel="Instagram Line">
+                                                <rect key="frame" x="16" y="654" width="343" height="1"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Hd-eq-RE7">
+                                                <rect key="frame" x="16" y="518" width="343" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tell Us About Your Church" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4B-60-uZC">
+                                                <rect key="frame" x="11" y="96" width="343" height="156"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="50"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="addPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="fL3-pn-hyC">
+                                                <rect key="frame" x="125" y="706" width="125" height="125"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Describe your church" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMn-2b-iHt">
+                                                <rect key="frame" x="75" y="616" width="225" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                                <color key="textColor" red="0.53607785701751709" green="0.39311575889587402" blue="0.5042155385017395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1200" id="09J-Ji-Qoa"/>
+                                            <constraint firstAttribute="height" constant="1000" id="09J-Ji-Qoa"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -682,35 +729,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SBx-7L-vR7"/>
                     </view>
-                    <size key="freeformSize" width="375" height="1200"/>
+                    <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <segue destination="UbD-Pl-pfu" kind="unwind" identifier="unwindSignUpSegue" unwindAction="unwindSignUPWithSegue:" id="dYi-1r-2J0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5S8-Dw-eBH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="UbD-Pl-pfu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1640.8" y="997.53694581280797"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ase-qw-NhA">
-            <objects>
-                <viewController id="764-YQ-QLs" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="U3K-ww-CbE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tell Us About Your Church" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4B-60-uZC">
-                                <rect key="frame" x="16" y="487" width="343" height="156"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="50"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="usd-T8-S3w"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lzr-6s-yff" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2275" y="872"/>
+            <point key="canvasLocation" x="1686" y="924"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eaX-Z3-TFg">
@@ -736,7 +763,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addPhoto" width="128" height="128"/>
         <image name="emailWhite" width="100" height="100"/>
+        <image name="home" width="30" height="30"/>
+        <image name="messages" width="30" height="30"/>
+        <image name="notifications" width="30" height="30"/>
         <image name="passwordWhite" width="100" height="100"/>
+        <image name="prayer" width="30" height="30"/>
     </resources>
 </document>
