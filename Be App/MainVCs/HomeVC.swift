@@ -7,14 +7,24 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeVC: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         UITabBar.appearance().unselectedItemTintColor = UIColor.white
         UITabBar.appearance().tintColor = UIColor(red: 0, green: 150/255.0, blue: 150.0/255, alpha: 1)
+        
+  
+        
+    
         
         
     }

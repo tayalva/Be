@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseStorage
 
 class SignUpVC4: UIViewController {
     
@@ -16,6 +17,7 @@ class SignUpVC4: UIViewController {
     @IBOutlet weak var addPhotoButton: UIButton!
     
     let photoPicker = UIImagePickerController()
+    var profileImage: UIImage!
     
     var email = ""
     var password = ""
@@ -25,12 +27,14 @@ class SignUpVC4: UIViewController {
     var state = ""
     var zipCode = ""
     
-    //var database: Firestore!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
  
         photoPicker.delegate = self
+        addPhotoButton.layer.borderWidth = 1
+        addPhotoButton.layer.borderColor = UIColor.white.cgColor
     }
     
     
@@ -51,30 +55,65 @@ class SignUpVC4: UIViewController {
         Auth.auth().createUser(withEmail: email, password: password) { user, error in
             let database = Firestore.firestore()
             guard let userID = user?.user.uid else {return}
+
+            //store image to storage
+            let storage = Storage.storage()
+            let storageRef = storage.reference()
+            var downloadURL: String!
             
+//////////////////store to firestore
+            func saveData() {
                 let ref = database.collection("user").document(userID)
-            
-                
                 let data = [
-                "email" : self.email,
-                "churchName": self.churchName,
-                "churchLocation" : "\(self.address), \(self.city), \(self.state) \(self.zipCode) ",
-                "missionStatement" : "test mission statement",
-                "Bio" : "We love Jesus"
+                    "email" : self.email,
+                    "churchName": self.churchName,
+                    "churchLocation" : "\(self.address), \(self.city), \(self.state) \(self.zipCode) ",
+                    "missionStatement" : "test mission statement",
+                    "bio" : "We love Jesus",
+                    "photo" : downloadURL
                 ]
+                print(data)
                 
                 ref.setData(data) { error in
-                if let error = error {
-                    print("Error adding document: \(error)")
-                } else {
-                    print("Docuemnt added with ID: \(ref.documentID)")
+                    if let error = error {
+                        print("Error adding document: \(error)")
+                    } else {
+                        print("Docuemnt added with ID: \(ref.documentID)")
+                    }
+                    
                 }
-                
             }
             
+////////////////
+            if let image = UIImageJPEGRepresentation(self.profileImage, 0.5) {
+                
+                    let imageRef = storageRef.child("\(userID)/profileImage.jpeg")
             
+                    imageRef.putData(image, metadata: nil) { (metadata, error) in
+   
+                        guard let metadata = metadata else {
+                            print("error uploading image!")
+                            return
+                        }
+                        imageRef.downloadURL { url, error in
+                            guard let url = url else {
+                                return
+                            }
+
+                            downloadURL = url.absoluteString
+                            saveData()
+                        }
+                }
+
+            } else {
+         
+                    saveData()
         }
-        
+            
+            
+            
+            
+    }
      performSegue(withIdentifier: "unwindSignUpSegue", sender: self)
 
         
@@ -103,6 +142,7 @@ extension SignUpVC4: UIImagePickerControllerDelegate, UINavigationControllerDele
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             
+            profileImage = chosenImage
             addPhotoButton.setImage(chosenImage, for: .normal)
             dismiss(animated: true, completion: nil)
         } else {
