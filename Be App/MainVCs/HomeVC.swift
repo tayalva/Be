@@ -12,6 +12,7 @@ import Firebase
 class HomeVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var profileImage: UIImageView!
     
     
     override func viewDidLoad() {
@@ -22,17 +23,20 @@ class HomeVC: UIViewController {
         UITabBar.appearance().unselectedItemTintColor = UIColor.white
         UITabBar.appearance().tintColor = UIColor(red: 0, green: 150/255.0, blue: 150.0/255, alpha: 1)
         
-  
+        profileImage.layer.cornerRadius = profileImage.bounds.height/2
+        profileImage.clipsToBounds = true 
         
-    
-        
+
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    @IBAction func postButton(_ sender: Any) {
+        
+        performSegue(withIdentifier: "PostSegue", sender: nil)
+        
     }
+    
     
 
     /*

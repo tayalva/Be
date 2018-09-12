@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C03F74DB9E3F41061D68317 /* Pods_Be_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5179233F4343EF8D67CEE8DB /* Pods_Be_App.framework */; };
+		A642F1CF2149B4A60079C8BC /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642F1CE2149B4A60079C8BC /* PostVC.swift */; };
 		A666A1272138AD570072F623 /* SignUpVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A666A1262138AD570072F623 /* SignUpVC1.swift */; };
 		A666A1292138AD690072F623 /* SignUpVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A666A1282138AD690072F623 /* SignUpVC2.swift */; };
 		A666A12B2138AD750072F623 /* SignUpVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A666A12A2138AD750072F623 /* SignUpVC3.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		5179233F4343EF8D67CEE8DB /* Pods_Be_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Be_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A642F1CE2149B4A60079C8BC /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 		A666A1262138AD570072F623 /* SignUpVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC1.swift; sourceTree = "<group>"; };
 		A666A1282138AD690072F623 /* SignUpVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC2.swift; sourceTree = "<group>"; };
 		A666A12A2138AD750072F623 /* SignUpVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC3.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				A666A13121405EDA0072F623 /* PrayersVC.swift */,
 				A666A13321405EE60072F623 /* MessagesVC.swift */,
 				A666A13521405EF50072F623 /* NotificationsVC.swift */,
+				A642F1CE2149B4A60079C8BC /* PostVC.swift */,
 			);
 			path = MainVCs;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				A6CE7ECE2130C51100E1BA48 /* AppDelegate.swift in Sources */,
 				A666A1292138AD690072F623 /* SignUpVC2.swift in Sources */,
 				A666A12B2138AD750072F623 /* SignUpVC3.swift in Sources */,
+				A642F1CF2149B4A60079C8BC /* PostVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +425,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KNEDT6Y55K;
 				INFOPLIST_FILE = "Be App/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TaylorSmith.Be-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -437,7 +444,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KNEDT6Y55K;
 				INFOPLIST_FILE = "Be App/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TaylorSmith.Be-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

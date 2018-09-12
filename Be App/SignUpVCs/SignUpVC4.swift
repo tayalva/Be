@@ -56,7 +56,7 @@ class SignUpVC4: UIViewController {
             let database = Firestore.firestore()
             guard let userID = user?.user.uid else {return}
 
-            //store image to storage
+            
             let storage = Storage.storage()
             let storageRef = storage.reference()
             var downloadURL: String!
@@ -84,7 +84,7 @@ class SignUpVC4: UIViewController {
                 }
             }
             
-////////////////
+//////////////////store image to storage
             if let image = UIImageJPEGRepresentation(self.profileImage, 0.5) {
                 
                     let imageRef = storageRef.child("\(userID)/profileImage.jpeg")
