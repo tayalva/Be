@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -71,7 +70,7 @@
                                         <rect key="frame" x="0.0" y="82" width="355" height="40"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="passwordWhite" translatesAutoresizingMaskIntoConstraints="NO" id="ivJ-74-Rop">
-                                                <rect key="frame" x="0.0" y="2.6666666666666288" width="35" height="35"/>
+                                                <rect key="frame" x="0.0" y="2.3333333333333144" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="35" id="DIc-qz-ogB"/>
                                                     <constraint firstAttribute="height" constant="35" id="Vrz-K9-Kk2"/>
@@ -131,20 +130,20 @@
                                         <rect key="frame" x="27.666666666666657" y="254.99999999999994" width="299.66666666666674" height="20"/>
                                         <subviews>
                                             <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Bz-Ib-0M0">
-                                                <rect key="frame" x="0.0" y="9.6666666666667425" width="137" height="1"/>
+                                                <rect key="frame" x="0.0" y="9.3333333333333712" width="136.33333333333334" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="k3W-Qn-ano"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sf2-oA-3rA">
-                                                <rect key="frame" x="142" y="0.0" width="17" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sf2-oA-3rA">
+                                                <rect key="frame" x="141.33333333333334" y="0.0" width="17" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhl-u1-Cl1">
-                                                <rect key="frame" x="164" y="9.6666666666667425" width="135.66666666666663" height="1"/>
+                                                <rect key="frame" x="163.33333333333331" y="9.3333333333333712" width="136.33333333333331" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="YYB-4O-ZCf"/>
@@ -635,14 +634,14 @@
                                 <rect key="frame" x="0.0" y="187.66666666666669" width="375" height="541.33333333333326"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postCell" rowHeight="200" id="1ah-YM-3l6">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postCell" rowHeight="200" id="1ah-YM-3l6" customClass="PostCustomCell" customModule="Be_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1ah-YM-3l6" id="ey9-9o-nz8">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1ah-YM-3l6" id="ey9-9o-nz8" customClass="PostCustomCell" customModule="Be_App" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="199.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IFw-gb-tp7">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WChurchLogo" translatesAutoresizingMaskIntoConstraints="NO" id="IFw-gb-tp7">
                                                     <rect key="frame" x="15" y="11" width="55" height="55"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -653,8 +652,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Great Day at church today!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fqn-eD-xdh">
-                                                    <rect key="frame" x="15" y="74" width="345" height="92"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Great Day at church today!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fqn-eD-xdh">
+                                                    <rect key="frame" x="15" y="74.000000000000057" width="345" height="92"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -663,6 +662,11 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="postLabel" destination="Fqn-eD-xdh" id="eJf-cM-yRt"/>
+                                            <outlet property="profileImage" destination="IFw-gb-tp7" id="064-21-R2w"/>
+                                            <outlet property="profileNameLabel" destination="MDJ-3V-1vB" id="Yn3-Ld-8g5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -672,8 +676,8 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WChurchLogo" translatesAutoresizingMaskIntoConstraints="NO" id="RM2-RB-uKW">
                                         <rect key="frame" x="8" y="10" width="75" height="75"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="MyF-bJ-kbk"/>
-                                            <constraint firstAttribute="width" constant="75" id="p6a-Ar-BLM"/>
+                                            <constraint firstAttribute="height" constant="75" id="Ot1-Bm-Okf"/>
+                                            <constraint firstAttribute="width" constant="75" id="vNW-UH-eIN"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxT-wa-qdq">
@@ -690,13 +694,12 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="IxT-wa-qdq" firstAttribute="leading" secondItem="RM2-RB-uKW" secondAttribute="trailing" constant="8" id="3qs-0I-QPH"/>
-                                    <constraint firstAttribute="trailing" secondItem="IxT-wa-qdq" secondAttribute="trailing" constant="8" id="GlW-gf-bf7"/>
-                                    <constraint firstAttribute="bottom" secondItem="IxT-wa-qdq" secondAttribute="bottom" constant="9.6699999999999999" id="PVh-88-5cp"/>
-                                    <constraint firstAttribute="bottom" secondItem="RM2-RB-uKW" secondAttribute="bottom" constant="9.6699999999999999" id="YGZ-8y-tzK"/>
-                                    <constraint firstItem="IxT-wa-qdq" firstAttribute="top" secondItem="0F7-77-2Bq" secondAttribute="top" constant="10" id="f0z-34-gy4"/>
-                                    <constraint firstItem="RM2-RB-uKW" firstAttribute="top" secondItem="0F7-77-2Bq" secondAttribute="top" constant="10" id="fQF-Ju-M6a"/>
-                                    <constraint firstItem="RM2-RB-uKW" firstAttribute="leading" secondItem="0F7-77-2Bq" secondAttribute="leading" constant="8" id="vfB-B2-LGj"/>
+                                    <constraint firstAttribute="trailing" secondItem="IxT-wa-qdq" secondAttribute="trailing" constant="8" id="FAd-eM-6mW"/>
+                                    <constraint firstItem="RM2-RB-uKW" firstAttribute="top" secondItem="0F7-77-2Bq" secondAttribute="top" constant="10" id="GJI-wI-U6d"/>
+                                    <constraint firstAttribute="bottom" secondItem="IxT-wa-qdq" secondAttribute="bottom" constant="9.6699999999999999" id="mjS-KY-wWk"/>
+                                    <constraint firstItem="IxT-wa-qdq" firstAttribute="leading" secondItem="RM2-RB-uKW" secondAttribute="trailing" constant="8" id="u06-Te-csR"/>
+                                    <constraint firstItem="RM2-RB-uKW" firstAttribute="leading" secondItem="0F7-77-2Bq" secondAttribute="leading" constant="8" id="uxB-5l-1uU"/>
+                                    <constraint firstItem="IxT-wa-qdq" firstAttribute="top" secondItem="0F7-77-2Bq" secondAttribute="top" constant="10" id="zbS-8r-epo"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -704,11 +707,11 @@
                         <constraints>
                             <constraint firstItem="0F7-77-2Bq" firstAttribute="leading" secondItem="BU7-Yt-nfa" secondAttribute="leading" id="2wb-57-Ead"/>
                             <constraint firstItem="edM-Hb-hcU" firstAttribute="trailing" secondItem="BU7-Yt-nfa" secondAttribute="trailing" id="7za-no-lic"/>
+                            <constraint firstItem="edM-Hb-hcU" firstAttribute="height" secondItem="a7H-zS-svt" secondAttribute="height" multiplier="4:6" id="ETQ-hm-Zdj"/>
                             <constraint firstItem="edM-Hb-hcU" firstAttribute="top" secondItem="0F7-77-2Bq" secondAttribute="bottom" constant="5" id="GdL-S3-scK"/>
                             <constraint firstItem="0F7-77-2Bq" firstAttribute="top" secondItem="BU7-Yt-nfa" secondAttribute="top" id="arB-ub-kZR"/>
                             <constraint firstItem="edM-Hb-hcU" firstAttribute="leading" secondItem="BU7-Yt-nfa" secondAttribute="leading" id="byL-uw-KEN"/>
                             <constraint firstItem="0F7-77-2Bq" firstAttribute="trailing" secondItem="BU7-Yt-nfa" secondAttribute="trailing" id="gKh-1d-biH"/>
-                            <constraint firstItem="edM-Hb-hcU" firstAttribute="height" secondItem="a7H-zS-svt" secondAttribute="height" multiplier="4:6" id="uwg-ns-CNg"/>
                             <constraint firstItem="edM-Hb-hcU" firstAttribute="bottom" secondItem="BU7-Yt-nfa" secondAttribute="bottom" id="vnj-st-v1b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BU7-Yt-nfa"/>
@@ -984,12 +987,12 @@
     </scenes>
     <resources>
         <image name="WChurchLogo" width="150" height="150"/>
-        <image name="addPhoto" width="128" height="128"/>
+        <image name="addPhoto" width="102.40000152587891" height="102.40000152587891"/>
         <image name="emailWhite" width="100" height="100"/>
-        <image name="home" width="30" height="30"/>
-        <image name="messages" width="30" height="30"/>
-        <image name="notifications" width="30" height="30"/>
-        <image name="passwordWhite" width="100" height="100"/>
-        <image name="prayer" width="30" height="30"/>
+        <image name="home" width="22.5" height="22.5"/>
+        <image name="messages" width="22.5" height="22.5"/>
+        <image name="notifications" width="22.5" height="22.5"/>
+        <image name="passwordWhite" width="75" height="75"/>
+        <image name="prayer" width="22.5" height="22.5"/>
     </resources>
 </document>

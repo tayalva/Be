@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C03F74DB9E3F41061D68317 /* Pods_Be_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5179233F4343EF8D67CEE8DB /* Pods_Be_App.framework */; };
+		A600807C214AE86F004F296C /* PostCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A600807B214AE86F004F296C /* PostCustomCell.swift */; };
 		A642F1CF2149B4A60079C8BC /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642F1CE2149B4A60079C8BC /* PostVC.swift */; };
 		A666A1272138AD570072F623 /* SignUpVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A666A1262138AD570072F623 /* SignUpVC1.swift */; };
 		A666A1292138AD690072F623 /* SignUpVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A666A1282138AD690072F623 /* SignUpVC2.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		5179233F4343EF8D67CEE8DB /* Pods_Be_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Be_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A600807B214AE86F004F296C /* PostCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCustomCell.swift; sourceTree = "<group>"; };
 		A642F1CE2149B4A60079C8BC /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 		A666A1262138AD570072F623 /* SignUpVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC1.swift; sourceTree = "<group>"; };
 		A666A1282138AD690072F623 /* SignUpVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC2.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				A666A12E21405EA10072F623 /* HomeVC.swift */,
+				A600807B214AE86F004F296C /* PostCustomCell.swift */,
 				A666A13121405EDA0072F623 /* PrayersVC.swift */,
 				A666A13321405EE60072F623 /* MessagesVC.swift */,
 				A666A13521405EF50072F623 /* NotificationsVC.swift */,
@@ -168,6 +171,7 @@
 				TargetAttributes = {
 					A6CE7EC92130C51100E1BA48 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -271,6 +275,7 @@
 				A666A13421405EE60072F623 /* MessagesVC.swift in Sources */,
 				A666A1272138AD570072F623 /* SignUpVC1.swift in Sources */,
 				A666A13221405EDA0072F623 /* PrayersVC.swift in Sources */,
+				A600807C214AE86F004F296C /* PostCustomCell.swift in Sources */,
 				A666A12F21405EA10072F623 /* HomeVC.swift in Sources */,
 				A666A12D213B9AE80072F623 /* SignUpVC4.swift in Sources */,
 				A6CE7ED02130C51100E1BA48 /* LogInVC.swift in Sources */,
@@ -431,7 +436,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TaylorSmith.Be-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -450,7 +455,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TaylorSmith.Be-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
