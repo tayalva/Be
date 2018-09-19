@@ -39,15 +39,7 @@ class SignUpVC1: UIViewController {
         }
     }
     
-    
-    // MARK: - Navigation
 
- 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        
- 
-    }
     
     
     func displayAlert(_ title: String, andMessage message: String) {
@@ -60,5 +52,15 @@ class SignUpVC1: UIViewController {
         present(alert, animated: true, completion: nil)
     }
 
-
+    // MARK: - Navigation
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let vc = segue.destination as? SignUpVC2
+        
+        vc?.email = email
+        vc?.password = password
+        
+    }
 }

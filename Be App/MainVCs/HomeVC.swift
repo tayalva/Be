@@ -32,6 +32,10 @@ class HomeVC: UIViewController {
         profileImage.layer.cornerRadius = profileImage.bounds.height/2
         profileImage.clipsToBounds = true 
         
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        
+        
 
         
     }
@@ -65,7 +69,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostCustomCell
-        tableView.rowHeight = 200
+      
        
         pathRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
             
