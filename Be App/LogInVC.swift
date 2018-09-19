@@ -72,16 +72,16 @@ class LogInVC: UIViewController {
             self.userID = user?.user.uid
             self.performSegue(withIdentifier: "mainViewSegue", sender: nil)
             print("You are logged in as \(email)")
-           
-            
- 
-            
             
         }
         
     }
     
- 
+    @IBAction func signUpButton(_ sender: Any) {
+        
+        performSegue(withIdentifier: "ToSignUp", sender: nil)
+    }
+    
     
     
     func animateLoading() {

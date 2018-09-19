@@ -165,7 +165,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="87C-2s-sem" kind="show" id="FFc-I7-fGN"/>
+                                            <action selector="signUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QCM-BG-Xvq"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXW-ql-lIX">
@@ -218,6 +218,7 @@
                         <outlet property="passwordIcon" destination="ivJ-74-Rop" id="tYj-Ze-33w"/>
                         <outlet property="passwordLine" destination="3ss-Vn-9ve" id="FlI-7n-wEj"/>
                         <outlet property="passwordTextField" destination="aPN-Sj-zjP" id="7PZ-wU-10C"/>
+                        <segue destination="87C-2s-sem" kind="show" identifier="ToSignUp" id="pfj-Iw-Dvk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -241,7 +242,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="nextButton:" destination="uaa-AF-dgW" eventType="touchUpInside" id="uA4-ef-jJa"/>
+                                    <action selector="nextButton:" destination="uaa-AF-dgW" eventType="touchUpInside" id="pOO-fo-1IE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's be the church" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnq-sO-1Nh">
@@ -321,8 +322,8 @@
                     <navigationItem key="navigationItem" id="EIU-cp-AG9"/>
                     <connections>
                         <outlet property="confirmPasswordTextField" destination="SNn-hG-Pxz" id="3iq-Zw-sd6"/>
-                        <outlet property="emailTextField" destination="DBK-Gr-wIs" id="SwW-SZ-r1l"/>
-                        <outlet property="passwordTextField" destination="ojH-ph-C9Y" id="Qou-SD-a3f"/>
+                        <outlet property="emailTextField" destination="DBK-Gr-wIs" id="cC6-73-snQ"/>
+                        <outlet property="passwordTextField" destination="ojH-ph-C9Y" id="eTT-uV-xvs"/>
                         <segue destination="YUd-YE-jO8" kind="show" identifier="ToSignUp2" id="avG-kZ-yup"/>
                     </connections>
                 </viewController>
@@ -637,7 +638,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postCell" rowHeight="200" id="1ah-YM-3l6" customClass="PostCustomCell" customModule="Be_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1ah-YM-3l6" id="ey9-9o-nz8" customClass="PostCustomCell" customModule="Be_App" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1ah-YM-3l6" id="ey9-9o-nz8">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="199.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -645,17 +646,17 @@
                                                     <rect key="frame" x="15" y="11" width="55" height="55"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The W Church" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDJ-3V-1vB">
-                                                    <rect key="frame" x="126" y="27" width="123" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Great Day at church today!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fqn-eD-xdh">
                                                     <rect key="frame" x="15" y="74.000000000000057" width="345" height="92"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The W Church" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDJ-3V-1vB">
+                                                    <rect key="frame" x="78" y="11" width="123" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
