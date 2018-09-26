@@ -777,7 +777,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BU7-Yt-nfa"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Be." id="4re-VI-EoW"/>
+                    <navigationItem key="navigationItem" title="Be." id="4re-VI-EoW">
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="hKg-ry-w9i">
+                            <connections>
+                                <action selector="signOutButton:" destination="9eg-hA-Ugm" id="2b9-r0-WY6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="profileImage" destination="RM2-RB-uKW" id="Gnr-j5-tEV"/>
                         <outlet property="tableView" destination="edM-Hb-hcU" id="DLq-Xk-Fkd"/>

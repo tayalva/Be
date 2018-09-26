@@ -40,7 +40,15 @@ class LogInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
- 
+        Auth.auth().addStateDidChangeListener(){ auth, user in
+            
+            if user != nil {
+                
+                self.performSegue(withIdentifier: "mainViewSegue", sender: nil)
+                self.emailTextField.text = nil
+                self.passwordTextField.text = nil
+            }
+        }
         
         
     }

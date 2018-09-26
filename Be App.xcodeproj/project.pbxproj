@@ -11,6 +11,7 @@
 		A600807C214AE86F004F296C /* PostCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A600807B214AE86F004F296C /* PostCustomCell.swift */; };
 		A62D44342152A73F001B4C6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A62D44332152A73F001B4C6F /* GoogleService-Info.plist */; };
 		A642F1CF2149B4A60079C8BC /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642F1CE2149B4A60079C8BC /* PostVC.swift */; };
+		A65745EC215409EA00EB30DD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65745EB215409EA00EB30DD /* User.swift */; };
 		A666A1292138AD690072F623 /* SignUpVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A666A1282138AD690072F623 /* SignUpVC2.swift */; };
 		A666A12B2138AD750072F623 /* SignUpVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A666A12A2138AD750072F623 /* SignUpVC3.swift */; };
 		A666A12D213B9AE80072F623 /* SignUpVC4.swift in Sources */ = {isa = PBXBuildFile; fileRef = A666A12C213B9AE80072F623 /* SignUpVC4.swift */; };
@@ -31,6 +32,7 @@
 		A600807B214AE86F004F296C /* PostCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCustomCell.swift; sourceTree = "<group>"; };
 		A62D44332152A73F001B4C6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		A642F1CE2149B4A60079C8BC /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
+		A65745EB215409EA00EB30DD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A666A1282138AD690072F623 /* SignUpVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC2.swift; sourceTree = "<group>"; };
 		A666A12A2138AD750072F623 /* SignUpVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC3.swift; sourceTree = "<group>"; };
 		A666A12C213B9AE80072F623 /* SignUpVC4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC4.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				A6CE7ECD2130C51100E1BA48 /* AppDelegate.swift */,
 				A6CE7ECF2130C51100E1BA48 /* LogInVC.swift */,
+				A65745EB215409EA00EB30DD /* User.swift */,
 				A666A1252138AD3F0072F623 /* SignUpVCs */,
 				A6CE7ED12130C51100E1BA48 /* Main.storyboard */,
 				A666A13021405EAA0072F623 /* MainVCs */,
@@ -271,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A65745EC215409EA00EB30DD /* User.swift in Sources */,
 				A666A13621405EF60072F623 /* NotificationsVC.swift in Sources */,
 				A666A13421405EE60072F623 /* MessagesVC.swift in Sources */,
 				A666A13221405EDA0072F623 /* PrayersVC.swift in Sources */,

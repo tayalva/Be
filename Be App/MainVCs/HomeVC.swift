@@ -14,6 +14,8 @@ class HomeVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profileImage: UIImageView!
     
+    var user: User!
+    
     var postsArray = ""
     
    let storage = Storage.storage()
@@ -35,7 +37,14 @@ class HomeVC: UIViewController {
         
         tableView.rowHeight = UITableView.automaticDimension
         
-        
+        Auth.auth().addStateDidChangeListener() { auth, user in
+            
+            guard let user = user else { return }
+            self.user = User(authData: user)
+            
+            print(self.user)
+            
+        }
 
         
     }
@@ -47,6 +56,18 @@ class HomeVC: UIViewController {
         
     }
     
+    @IBAction func signOutButton(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        
+        do {
+            try firebaseAuth.signOut()
+            dismiss(animated: true, completion: nil)
+           print("You are signed out!")
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+        }
+    
+    }
     
 
     /*
