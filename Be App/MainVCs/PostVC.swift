@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Firebase
 
 class PostVC: UIViewController {
 
     @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var textView: UITextView!
     
+    let database = Firestore.firestore()
+    let user = Auth.auth().currentUser
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +33,32 @@ class PostVC: UIViewController {
     }
 
     @IBAction func postButton(_ sender: Any) {
+        saveData()
         textView.resignFirstResponder()
         dismiss(animated: true, completion: nil)
     }
+    
+    
+    func saveData() {
+        let ref = database.collection("user").document((user?.uid)!).collection("posts").document()
+        let data : [String: Any] = [
+            "date" : Date(),
+            "time" : Date().toMillis(),
+            "post" : textView.text
+           
+        ]
+        
+        
+        ref.setData(data) { error in
+            if let error = error {
+                print("Error adding document: \(error)")
+            } else {
+                print("Docuemnt added with ID: \(ref.documentID)")
+            }
+            
+        }
+    }
+    
     
 
     /*

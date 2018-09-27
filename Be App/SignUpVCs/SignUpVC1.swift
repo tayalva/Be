@@ -39,7 +39,11 @@ class SignUpVC1: UIViewController {
         }
     }
     
-
+    @IBAction func backToLogin(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     
     func displayAlert(_ title: String, andMessage message: String) {

@@ -311,8 +311,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="backToLoginButton:" destination="uaa-AF-dgW" eventType="touchUpInside" id="NAv-oV-br7"/>
-                                    <action selector="nextButton:" destination="uaa-AF-dgW" eventType="touchUpInside" id="bTL-1X-RCp"/>
+                                    <action selector="backToLogin:" destination="uaa-AF-dgW" eventType="touchUpInside" id="rwy-X0-LCZ"/>
                                 </connections>
                             </button>
                         </subviews>

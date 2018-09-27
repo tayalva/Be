@@ -78,6 +78,8 @@ class LogInVC: UIViewController {
             }
             
             self.userID = user?.user.uid
+            
+            
             self.performSegue(withIdentifier: "mainViewSegue", sender: nil)
             print("You are logged in as \(email)")
             
