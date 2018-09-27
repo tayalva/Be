@@ -43,7 +43,6 @@ class PostVC: UIViewController {
         let ref = database.collection("user").document((user?.uid)!).collection("posts").document()
         let data : [String: Any] = [
             "date" : Date(),
-            "time" : Date().toMillis(),
             "post" : textView.text
            
         ]

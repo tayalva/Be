@@ -16,7 +16,8 @@ class HomeVC: UIViewController {
     
     var user: User!
     
-    var postsArray = ""
+    var postsArray: UserPost!
+    let db = Firestore.firestore()
     
    let storage = Storage.storage()
     let pathRef = Storage.storage().reference(forURL: "https://firebasestorage.googleapis.com/v0/b/beapp4488.appspot.com/o/u8uDEUq9qTSUOHPSpThILDZdELY2%2FprofileImage.jpeg?alt=media&token=54645577-e10d-4c57-bee6-a6d984f0e2af")
@@ -70,15 +71,31 @@ class HomeVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func loadPosts() {
+        
+        db.collection("user").document(user.uid).collection("posts").getDocuments() { snapShot, error in
+            
+            
+            if let error = error {
+                print("error getting documents")
+            } else {
+                
+                for document in snapShot!.documents {
+                    
+                   // let user = UserPost(, time: <#T##Date#>, post: <#T##String#>)
+                }
+            }
+            
+            
+            
+        }
+        
+        
     }
-    */
+    
+    
+    
+    
 
 }
 
