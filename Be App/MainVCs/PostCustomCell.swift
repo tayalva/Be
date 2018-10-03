@@ -13,6 +13,7 @@ class PostCustomCell: UITableViewCell {
     @IBOutlet weak var profileNameLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var postLabel: UILabel!
+    @IBOutlet weak var timeStampLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

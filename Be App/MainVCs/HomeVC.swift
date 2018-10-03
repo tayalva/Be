@@ -93,6 +93,7 @@ class HomeVC: UIViewController {
                     print("post: \(post.post)")
                     self.postsArray.append(post)
                     self.postsArray.removeDuplicates()
+                    print(post.time)
                     self.tableView.reloadData()
                   
                 }
@@ -101,11 +102,48 @@ class HomeVC: UIViewController {
             
             
         }
-        
-        
     }
     
     
+    func timeStampFormatter(date: Date) -> String {
+        
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        var minutes: String {
+            let minute = calendar.component(.minute, from: date)
+            if minute <= 9 {
+                return "0\(minute)"
+            } else {
+                
+                return "\(minute)"
+            }
+            
+        }
+        var day: String {
+           let weekday = calendar.component(.weekday, from: date)
+            
+            switch weekday {
+            case 1: return "Sunday"
+            case 2: return "Monday"
+            case 3: return "Tuesday"
+            case 4: return "Wednesday"
+            case 5: return "Thursday"
+            case 6: return "Friday"
+            case 7: return "Saturday"
+            default: return ""
+            }
+            
+        }
+        
+        if calendar.component(.weekday, from: Date()) == calendar.component(.weekday, from: date) {
+            return "Today \(hour):\(minutes)"
+        } else {
+            
+            
+            return "\(day) \(hour):\(minutes)"
+        }
+        
+    }
     
     
 
@@ -139,6 +177,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         
       
         cell.profileNameLabel.text = "The W Church"
+        cell.timeStampLabel.text = timeStampFormatter(date: post.time)
         cell.postLabel.text = post.post
        
         

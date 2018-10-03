@@ -726,6 +726,7 @@
                                             <outlet property="postLabel" destination="Fqn-eD-xdh" id="eJf-cM-yRt"/>
                                             <outlet property="profileImage" destination="IFw-gb-tp7" id="064-21-R2w"/>
                                             <outlet property="profileNameLabel" destination="MDJ-3V-1vB" id="Yn3-Ld-8g5"/>
+                                            <outlet property="timeStampLabel" destination="uXc-PS-70P" id="OW9-v5-yez"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
