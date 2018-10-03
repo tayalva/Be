@@ -9,7 +9,8 @@
 import Foundation
 
 
-class UserPost {
+struct UserPost: Hashable {
+    
     
     var userID: String
     var time: Date
@@ -23,6 +24,14 @@ class UserPost {
         self.time = time
         self.postID = postID
         self.post = post
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(postID)
+    }
+    
+    static func == (lhs: UserPost, rhs: UserPost) -> Bool {
+        return lhs.postID == rhs.postID
     }
     
 }

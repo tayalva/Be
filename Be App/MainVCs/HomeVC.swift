@@ -56,6 +56,7 @@ class HomeVC: UIViewController {
     
 
 
+
     @IBAction func postButton(_ sender: Any) {
         
         performSegue(withIdentifier: "PostSegue", sender: nil)
@@ -91,12 +92,14 @@ class HomeVC: UIViewController {
                     
                     print("post: \(post.post)")
                     self.postsArray.append(post)
+                    self.postsArray.removeDuplicates()
                     self.tableView.reloadData()
+                  
                 }
             }
             
             
-            self.tableView.reloadData()
+            
         }
         
         
