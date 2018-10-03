@@ -13,14 +13,16 @@ class UserPost {
     
     var userID: String
     var time: Date
+    var postID: String 
     var post: String
     
     
-    init(userID: String, time: Date, post: String) {
+    init(userID: String, time: Date, postID: String, post: String) {
         
         self.userID = userID
         self.time = time
-        self.post = post 
+        self.postID = postID
+        self.post = post
     }
     
 }

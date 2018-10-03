@@ -16,7 +16,7 @@ class HomeVC: UIViewController {
     
     var user: User!
     
-    var postsArray: UserPost!
+    var postsArray: [UserPost] = []
     let db = Firestore.firestore()
     
    let storage = Storage.storage()
@@ -42,13 +42,18 @@ class HomeVC: UIViewController {
             
             guard let user = user else { return }
             self.user = User(authData: user)
-            
+            self.loadPosts()
             print(self.user)
             
         }
 
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadPosts()
+    }
+    
 
 
     @IBAction func postButton(_ sender: Any) {
@@ -82,12 +87,16 @@ class HomeVC: UIViewController {
                 
                 for document in snapShot!.documents {
                     
-                   // let user = UserPost(, time: <#T##Date#>, post: <#T##String#>)
+                    let post = UserPost(userID: self.user.uid, time: document.data()["date"] as! Date , postID: document.documentID , post: document.data()["post"] as! String)
+                    
+                    print("post: \(post.post)")
+                    self.postsArray.append(post)
+                    self.tableView.reloadData()
                 }
             }
             
             
-            
+            self.tableView.reloadData()
         }
         
         
@@ -102,12 +111,13 @@ class HomeVC: UIViewController {
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return postsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostCustomCell
       
+        let post = postsArray[indexPath.row]
        
         pathRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
             
@@ -124,9 +134,9 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         
         
         
-       // cell.profileImage.image = image
+      
         cell.profileNameLabel.text = "The W Church"
-        cell.postLabel.text = "Great fall kick off. Jesus was proclaimed and people were saved!"
+        cell.postLabel.text = post.post
        
         
         return cell
